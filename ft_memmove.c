@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 12:55:39 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/26 08:07:44 by dsilva-g         ###   ########.fr       */
+/*   Created: 2023/04/26 09:14:07 by dsilva-g          #+#    #+#             */
+/*   Updated: 2023/04/26 09:18:31 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	idx;
 
-	if (n > 0)
-	{
-		while (s1[idx] != s2[idx])
-		{
-			return (s1[idx] - s2[idx]);
-			idx++;
-		}
-	}
+	idx = 0;
 	return (0);
 }

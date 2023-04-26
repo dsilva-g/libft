@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 12:55:39 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/26 08:07:44 by dsilva-g         ###   ########.fr       */
+/*   Created: 2023/04/26 09:35:39 by dsilva-g          #+#    #+#             */
+/*   Updated: 2023/04/26 09:54:21 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	idx;
+	size_t	t_size;
+	char	*str;
 
-	if (n > 0)
-	{
-		while (s1[idx] != s2[idx])
-		{
-			return (s1[idx] - s2[idx]);
-			idx++;
-		}
-	}
-	return (0);
+	t_size = count * size;
+	str = (char *)malloc(t_size);
+	if (!str)
+		return (0);
+	return (ft_memset(str, 0, t_size));
 }

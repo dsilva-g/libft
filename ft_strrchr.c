@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 13:37:42 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/23 17:27:46 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/04/26 08:08:16 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strrchr(const char *s, int c)
 			return (&s[idx]);
 		idx--;
 	}
-	return (0);	
+	return (0);
 }

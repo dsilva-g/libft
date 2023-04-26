@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 11:48:51 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/23 13:02:54 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/04/26 08:06:51 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t idx;
+	size_t	idx;
 
 	if (dstsize == 0)
 		return (ft_strlen(src));
