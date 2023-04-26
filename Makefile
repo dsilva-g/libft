@@ -6,7 +6,7 @@
 #    By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/26 10:20:21 by dsilva-g          #+#    #+#              #
-#    Updated: 2023/04/26 11:08:20 by dsilva-g         ###   ########.fr        #
+#    Updated: 2023/04/26 13:26:58 by dsilva-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,14 +34,16 @@ SRCS	= ft_isalpha.c \
 		  ft_calloc.c \
 		  ft_strdup.c
 
-OBJS	= $(SRCS:%.c=%.0)
+INC		= libft.h
+
+OBJS	= $(SRCS:%.c=%.o)
 
 CC		= gcc
 
 FLAGS	= -Wall -Werror -Wextra
 
 $(NAME):
-		$(CC) $(FLAGS) $(SRCS) -I ./
+		$(CC) $(FLAGS) -c $(SRCS) -I $(INC)
 	   	ar rc $(NAME) $(OBJS)	
 
 all:	$(NAME)
