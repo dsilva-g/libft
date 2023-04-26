@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 13:37:42 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/26 08:08:16 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:45:18 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[idx] >= 0)
 	{
 		if (s[idx] == c)
-			return (&s[idx]);
+			return ((char *)(s + idx));
 		idx--;
 	}
 	return (0);

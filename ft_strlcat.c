@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 11:57:23 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/19 13:01:08 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:10:26 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[len_dst + idx] = src[idx];
 		idx++;
 	}
-	dest[len_dst + idx] = '\0';
+	dst[len_dst + idx] = '\0';
 	return (len_dst + ft_strlen(src));
 }
