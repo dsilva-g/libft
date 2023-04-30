@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 09:27:24 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/26 10:54:51 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/04/28 18:51:39 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - ('a' - 'A'));
-	return (0);
+	return (c);
 }

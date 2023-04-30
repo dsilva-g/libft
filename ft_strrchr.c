@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 13:37:42 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/26 11:58:43 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/04/30 13:06:13 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	idx;
+	int	idx;
 
-	idx = 1 + ft_strlen(s);
-	while (s[idx] >= 0)
+	idx = ft_strlen(s);
+	while (idx >= 0)
 	{
-		if (s[idx] == c)
+		if (s[idx] == (unsigned char)c)
 			return ((char *)(s + idx));
 		idx--;
 	}
