@@ -6,7 +6,7 @@
 #    By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/26 10:20:21 by dsilva-g          #+#    #+#              #
-#    Updated: 2023/04/30 13:29:43 by dsilva-g         ###   ########.fr        #
+#    Updated: 2023/04/30 15:08:43 by dsilva-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ SRCS	= ft_isalpha.c \
 		  ft_toupper.c \
 		  ft_tolower.c \
 		  ft_calloc.c \
-		  ft_strdup.c
+		  ft_strdup.c \
+		  ft_substr.c
 
 INC		= libft.h
 
