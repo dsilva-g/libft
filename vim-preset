@@ -1,0 +1,54 @@
+set number
+set ruler
+syntax on
+filetype plugin indent on
+set autoindent
+set expandtab
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set relativenumber
+
+call plug#begin()
+
+Plug 'neoclide/coc.nvim'
+Plug 'xavierd/clang_complete'
+Plug 'itchyny/lightline.vim'
+
+call plug#end()
+
+" you can add this to your vimrc to avoid this message:
+let g:coc_disable_startup_warning = 1
+
+" use custom key for completion and navigate to the next complete item
+function! CheckBackspace() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+
+" Use <c-space> to trigger completion
+if has('nvim')
+    inoremap <silent><expr> <c-space> coc#refresh()
+else
+    inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" explorer
+inoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+
+" config lightline
+set laststatus=2
+let g:lightline = {
+    \ 'colorscheme': 'rosepine',
+    \ 'active': {
+        \ 'left': [ [ 'mode', 'paste'],
+                \   ['gitbranch']] 
+    \},
+    \ 'component_function': {
+    \ 'gitbranch': 'FugitiveHead'
+    \ },
+\ }
