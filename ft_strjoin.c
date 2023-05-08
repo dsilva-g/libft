@@ -6,8 +6,13 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:11:55 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/30 17:16:23 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/05/01 14:38:23 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	return (0);
+}

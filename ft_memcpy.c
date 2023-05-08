@@ -6,13 +6,12 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 13:44:07 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/26 11:27:17 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/05/08 13:01:32 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+/* WAY-1
+ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	idx;
 
@@ -25,4 +24,24 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		idx++;
 	}
 	return (dst);
+}
+*/
+
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	void	*orig_dst;
+
+	if (!dst && !src)
+		return (NULL);
+	orig_dst = dst;
+	while (n > 0)
+	{
+		*(unsigned char *)dst = *(unsigned char *)src;
+		dst++;
+		src++;
+		n--;
+	}
+	return (orig_dst);
 }

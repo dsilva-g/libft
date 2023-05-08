@@ -6,11 +6,10 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 09:14:07 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/30 17:08:20 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/05/08 13:19:49 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 /*	
  *	----TEST OK----
  *	unsigned int		i;
@@ -53,6 +52,9 @@
 	}
 	return (dst);
 	*/
+
+#include "libft.h"
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (!dst && !src)
