@@ -6,43 +6,43 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:42:52 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/05/01 14:31:51 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/05/10 11:00:33 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	check_sign(const char *str, int i, int *is_neg)
+static unsigned int	check_sign(const char *str, unsigned int idx, int *is_neg)
 {
-	if (str[i] == '-' || str[i] == '+')
+	if (str[idx] == '-' || str[idx] == '+')
 	{
-		if (str[i] == '-')
+		if (str[idx] == '-')
 			*is_neg = -1;
-		i++;
+		idx++;
 	}
-	return (i);
+	return (idx);
 }
 
 int			ft_atoi(const char *str)
 {
-	int			i;
-	int			is_neg;
-	long long	res;
+	unsigned int			idx;
+	int						is_neg;
+	long long				res;
 
-	i = 0;
+	idx = 0;
 	is_neg = 1;
 	res = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
-	i = check_sign(str, i, &is_neg);
-	while (str[i])
+	while (str[idx] == ' ' || str[idx] == '\t' || str[idx] == '\n' ||
+			str[idx] == '\v' || str[idx] == '\f' || str[idx] == '\r')
+		idx++;
+	idx = check_sign(str, idx, &is_neg);
+	while (str[idx])
 	{
-		if (str[i] < 48 || str[i] > 57)
+		if (str[idx] < 48 || str[idx] > 57)
 			break ;
 		else
-			res = (res * 10) + str[i] - 48;
-		i++;
+			res = (res * 10) + str[idx] - 48;
+		idx++;
 	}
 	return (res * is_neg);
 }

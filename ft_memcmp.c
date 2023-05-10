@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 08:47:50 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/05/08 13:45:02 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/05/09 09:40:10 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		str_s2++;
 		n--;
 	}
-	return ((int)*str_s1 - *str_s2);
+	return (*str_s1 - *str_s2);
 }

@@ -6,7 +6,7 @@
 #    By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/26 10:20:21 by dsilva-g          #+#    #+#              #
-#    Updated: 2023/04/30 17:51:12 by dsilva-g         ###   ########.fr        #
+#    Updated: 2023/05/10 15:58:41 by dsilva-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS	= ft_isalpha.c \
 		  ft_strchr.c \
 		  ft_strrchr.c \
 		  ft_strncmp.c \
+		  ft_strnstr.c \
 		  ft_memset.c \
 		  ft_memcpy.c \
 		  ft_memchr.c \
@@ -34,7 +35,9 @@ SRCS	= ft_isalpha.c \
 		  ft_atoi.c \
 		  ft_calloc.c \
 		  ft_strdup.c \
-		  ft_substr.c
+		  ft_substr.c \
+		  ft_strjoin.c \
+		  ft_strtrim.c
 
 INC		= libft.h
 

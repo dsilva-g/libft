@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 09:35:39 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/26 09:54:21 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/05/10 11:02:14 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	*ft_calloc(size_t count, size_t size)
 	t_size = count * size;
 	str = (char *)malloc(t_size);
 	if (!str)
-		return (0);
+		return (NULL);
 	return (ft_memset(str, 0, t_size));
 }

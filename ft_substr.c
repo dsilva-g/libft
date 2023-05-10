@@ -6,7 +6,7 @@
 /*   By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 15:06:39 by dsilva-g          #+#    #+#             */
-/*   Updated: 2023/04/30 16:39:11 by dsilva-g         ###   ########.fr       */
+/*   Updated: 2023/05/10 14:58:08 by dsilva-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,25 +45,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
-	size_t	i;
 
-	if (!s)
-		return (NULL);
-	if (ft_strlen(s) < start)
-	{
-		ptr = calloc (1, sizeof (char));
-		if (!ptr)
-			return (NULL);
-	}
-	if (ft_strlen(s) - start > len)
-		i = len + 1;
-	else
-		i = ft_strlen(s) - start + 1;
-	ptr = (char *) malloc ((i) * sizeof (char));
-	ft_memset(ptr, 0, i);
-	if (!ptr)
-		return (NULL);
-	ft_strlcpy(ptr, s + start, i);
-	return (ptr);
+	char	*sub;
+	size_t	new_len;
+
+    if (!s)
+        return (NULL);
+    if (ft_strlen(s) <= start || ft_strlen(s) == 0 || len == 0)
+        return (ft_strdup(""));
+	new_len = 0;
+    if (ft_strlen(s) - start > len)
+        new_len = len + 1;
+    else
+        new_len = ft_strlen(s) - start + 1;
+    sub = ft_calloc(new_len, sizeof(char));
+    if (!sub)
+        return (NULL);
+    ft_strlcpy(sub, s + start, new_len);
+    return (sub);
 }
