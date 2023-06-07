@@ -6,7 +6,7 @@
 #    By: dsilva-g <dsilva-g@student.42urduli>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/26 10:20:21 by dsilva-g          #+#    #+#              #
-#    Updated: 2023/05/31 17:47:36 by dsilva-g         ###   ########.fr        #
+#    Updated: 2023/05/24 10:41:28 by dsilva-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,9 @@ SRC_PART2 = \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
 
-SRCS = 	$(SRC_PART1) $(SRC_PART2)
+SRCS = \
+	$(SRC_PART1) \
+	$(SRC_PART2)
 
 OBJS = $(SRCS:.c=.o)
 
@@ -91,7 +93,7 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
-bonus: $(OBJS_BONUS)
+bonus: $(NAME) $(OBJS_BONUS)
 	@echo "$(BLUE)"
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS)
 	@echo "$(MAGENTA)Bonus...$(GREEN) compiled!$(WHITE)"
